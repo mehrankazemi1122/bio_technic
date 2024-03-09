@@ -27,6 +27,9 @@ jobs:
 #    - name: Install httpx
 #      run: |
 #        go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+    - name: Disable log section
+      run: echo "::set-output name=ACTIONS_STEP_DEBUG::"
+      id: disable_log
 
     - name: executing masscan
       run: |
